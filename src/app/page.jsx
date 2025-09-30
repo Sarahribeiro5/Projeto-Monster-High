@@ -3,6 +3,7 @@ import React from 'react'
 import Image from 'next/image'
 import { useState } from 'react'
 import axios from 'axios'
+import Header from '../Components/Header/page.jsx'
 
 export default function Page() {
   const [personagens, setPersonagens] = useState([])
@@ -24,6 +25,7 @@ export default function Page() {
 
   return (
     <div className="min-h-screen bg-blue-100 p-8 text-center">
+      <Header/>
       {/* Informações obrigatórias */}
       <div className="mb-12">
         <h1 className="text-4xl mb-4">Turma: 2TDS2</h1>
@@ -38,7 +40,6 @@ export default function Page() {
             className="rounded-full"
           />
         </div>
-        <p className="italic text-lg">"O sucesso é a soma de pequenos esforços repetidos dia após dia." - Robert Collier</p>
       </div>
 
       {/* Botão para buscar personagens */}

@@ -4,7 +4,9 @@
     align-items: center;
     padding: 20px;
     background-color: var(--mh-purple-dark);
+    height: 10vh;
     color: white;
+    border-bottom: 2px solid white;
 }
 
 .logo {
@@ -15,6 +17,7 @@
     font-weight: bold;
     font-size: 24px;
     gap: 10px;
+    color: var(--mh-pink);
 }
 
 .logoImage {
@@ -28,12 +31,12 @@
 }
 
 .nav a {
-    color: white;
+    color: var(--mh-pink);
     text-decoration: none;
     transition: color 0.3s;
     font-weight: bold;
 }
 
 .nav a:hover {
-    color: var(--mh-pink);  
+    color: white;  
 }

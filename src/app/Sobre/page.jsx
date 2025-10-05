@@ -28,7 +28,7 @@ export default function Sobre() {
                     <section className={styles.section}>
                         <h2 className={styles.sectionTitle}>Sobre o Projeto</h2>
                         <p className={styles.text}>
-                            O *Mundo Monster* é um projeto desenvolvido com o objetivo de reunir, em um só lugar, informações sobre o universo de Monster High. A aplicação apresenta detalhes sobre os personagens principais e explora os filmes da franquia, oferecendo sinopses, curiosidades e dados relevantes.
+                            O Mundo Monster é um projeto desenvolvido com o objetivo de reunir, em um só lugar, informações sobre o universo de Monster High. A aplicação apresenta detalhes sobre os personagens principais e explora os filmes da franquia, oferecendo sinopses, curiosidades e dados relevantes.
 
                             Além de servir como uma fonte de informação para fãs, o projeto também é uma oportunidade de aprendizado e prática no desenvolvimento de sistemas, unindo front-end, back-end e o uso de APIs. O *Mundo Monster* busca proporcionar uma experiência divertida e intuitiva para os usuários, reforçando valores importantes da franquia, como diversidade, amizade e aceitação.
 

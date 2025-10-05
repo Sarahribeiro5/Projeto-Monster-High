@@ -1,0 +1,50 @@
+/* page.module.css */
+.container {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--mh-background);
+    color: var(--mh-gray);
+}
+
+.hero {
+    position: relative;
+    height: 875px;
+    background: url('/Images/Monster-High-Wallpaper.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.greetingsSection {
+    background: rgba(0, 0, 0, 0.7); 
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 50%;
+    border: 2px solid white;
+    height: 35vh;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--mh-pink);
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--mh-purple);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+

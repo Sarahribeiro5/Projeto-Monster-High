@@ -3,12 +3,12 @@
 
 :root {
   --mh-pink: #EC4899;      
-  --mh-purple-dark: #6B21A8;
+  --mh-purple-dark: #4a1675;
   --mh-purple: #A855F7;
   --mh-turquoise: #06B6D4;
   --mh-black: #111111;
   --mh-gray: #F3F4F6;
-  --mh-background: #fcbbdf;
+  --mh-background: rgb(26, 11, 51);
 
 }
 

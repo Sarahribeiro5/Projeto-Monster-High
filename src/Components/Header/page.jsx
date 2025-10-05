@@ -7,9 +7,9 @@ const Header = () => {
             <div className={styles.logo}>Mundo Monster</div>
             <nav className={styles.nav}>
                 <a href="#home" className={styles.navLink}>Home</a>
-                <a href="#personagens" className={styles.navLink}>Personagens Principais</a>
+                <a href="#personagens" className={styles.navLink}>Personagens</a>
                 <a href="#filmes" className={styles.navLink}>Filmes</a>
-                <a href="#sobre" className={styles.navLink}>Sobre </a>
+                <a href="/Sobre" className={styles.navLink}>Sobre </a>
                 <a href="#contato" className={styles.navLink}>Contato</a>
             </nav>
         </header>

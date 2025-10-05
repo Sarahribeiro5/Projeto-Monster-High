@@ -1,16 +1,21 @@
 import React from 'react';
-import styles from './Header.module.css'; 
+import styles from './header.module.css';
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>Mundo Monster</div>
+            <div className={styles.logo}>
+                <p className={styles.logoText}>Mundo Monster</p>
+                <div className={styles.ImageContainer}>
+                    <img src="/Images/iconCaveira.png" alt="icon caveira" className={styles.logoImage}/>
+                </div>
+            </div>
             <nav className={styles.nav}>
-                <a href="#home" className={styles.navLink}>Home</a>
-                <a href="#personagens" className={styles.navLink}>Personagens</a>
-                <a href="#filmes" className={styles.navLink}>Filmes</a>
+                <a href="/" className={styles.navLink}>Home</a>
+                <a href="/Personagens" className={styles.navLink}>Personagens</a>
+                <a href="/Filmes" className={styles.navLink}>Filmes</a>
                 <a href="/Sobre" className={styles.navLink}>Sobre </a>
-                <a href="#contato" className={styles.navLink}>Contato</a>
+                <a href="/Contato" className={styles.navLink}>Contato</a>
             </nav>
         </header>
     );

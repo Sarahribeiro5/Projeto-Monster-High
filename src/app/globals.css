@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+
+:root {
+  --mh-pink: #EC4899;      
+  --mh-purple-dark: #6B21A8;
+  --mh-purple: #A855F7;
+  --mh-turquoise: #06B6D4;
+  --mh-black: #111111;
+  --mh-gray: #F3F4F6;
+  --mh-background: #fcbbdf;
+
+}
+
+
 * {
   margin: 0;
   padding: 0;

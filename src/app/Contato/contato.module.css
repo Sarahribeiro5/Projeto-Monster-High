@@ -1,0 +1,77 @@
+/* contato.module.css */
+.container {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: var(--mh-background);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.form {
+    background: var(--mh-turquoise);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    color: white;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field textarea {
+    padding: 10px;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #a855f7;
+}
+
+.limite {
+    font-size: 0.8rem;
+    color: white;
+    margin-top: 4px;
+}
+
+.button {
+    background: #ec4899;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #db2777;
+}

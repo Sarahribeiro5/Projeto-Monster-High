@@ -1,0 +1,27 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--mh-purple-dark);
+    color: white;
+    border-top: 2px solid white;
+    height: 10vh;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--mh-gray);
+}
+
+.developer {
+    color: var(--mh-pink);
+    margin-left: 3px;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.developer:hover {
+    color: var(--mh-turquoise);
+}

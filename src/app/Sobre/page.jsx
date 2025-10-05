@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Header from '@/Components/Header/page.jsx'
+import Footer from '@/Components/Footer/page.jsx'
 import styles from './sobre.module.css'
 
 export default function Sobre() {
@@ -35,6 +36,7 @@ export default function Sobre() {
                         </p>
                     </section>
                 </main>
+                <Footer />
             </div>
         </div>
     )

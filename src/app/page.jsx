@@ -1,14 +1,13 @@
 // page.jsx
 import React from 'react'
 import Header from '../Components/Header/page.jsx'
+import Footer from '../Components/Footer/page.jsx'
 import styles from './page.module.css'
 
 export default function Page() {
   return (
     <div className={styles.container}>
       <Header />
-
-      {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.greetingsSection}>
           <h1 className={styles.title}>Mundo Monster</h1>
@@ -18,6 +17,7 @@ export default function Page() {
           </p>
         </div>
       </section>
+      <Footer />
     </div>
   )
 }

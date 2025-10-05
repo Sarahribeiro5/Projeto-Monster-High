@@ -1,6 +1,7 @@
 // contato.jsx
 import React from 'react'
 import Header from '@/Components/Header/page.jsx'
+import Footer from '@/Components/Footer/page.jsx'
 import styles from './contato.module.css'
 
 export default function Contato() {
@@ -30,6 +31,7 @@ export default function Contato() {
                     <button type="submit" className={styles.button}>Enviar</button>
                 </form>
             </div>
+            <Footer />
         </div>
     )
 }

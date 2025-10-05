@@ -1,0 +1,104 @@
+.charactersPage {
+    min-height: 100vh;
+    background-color: var(--mh-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.introSection {
+    text-align: center;
+    margin: 3rem 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #ff7f7f;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.loadButton {
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--mh-pink);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.loadButton:hover {
+    background-color: var(--mh-purple);
+    transform: translateY(-2px);
+}
+
+.charactersGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 90%;
+    margin: 2rem 0;
+}
+
+.characterCard {
+    width: 200px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.characterCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+}
+
+.characterName {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(26, 11, 51, 0.85);
+    color: #b6595e;
+    padding: 10px 0;
+    font-weight: bold;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.noResults {
+    margin-top: 50px;
+    font-size: 1.1rem;
+    color: #f5f5f5;
+    text-align: center;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .characterCard {
+        width: 45%;
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .characterCard {
+        width: 90%;
+        height: 200px;
+    }
+}

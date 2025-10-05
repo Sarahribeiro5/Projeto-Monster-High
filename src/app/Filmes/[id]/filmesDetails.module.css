@@ -1,0 +1,48 @@
+.mainSection {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    background: var(--mh-background);
+}
+
+.card {
+    background: transparent;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+    color: white;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    border: 2px solid white;
+    height: 60vh;
+}
+
+.title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--mh-pink);
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.infoContainer {
+    padding: 1rem;
+    text-align: flex-start;
+    max-width: 50%;
+}
+
+.description {
+    padding: 0.25rem;
+}
+
+.strong {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--mh-purple);
+}
+

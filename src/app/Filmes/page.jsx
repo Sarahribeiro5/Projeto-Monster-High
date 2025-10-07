@@ -14,7 +14,7 @@ export default function Filmes() {
     const searchForMovies = async () => {
         setLoading(true)
         try {
-            const response = await axios.get('http://localhost:4001/filmes')
+            const response = await axios.get('http://localhost:5000/filmes')
             setMovies(response.data)
         } catch (error) {
             console.error('Erro ao buscar filmes:', error)

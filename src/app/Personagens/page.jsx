@@ -14,7 +14,7 @@ export default function Personagens() {
     const searchForCharacters = async () => {
         setLoading(true)
         try {
-            const response = await axios.get('http://localhost:4001/personagens')
+            const response = await axios.get('http://localhost:5000/personagens')
             setCharacters(response.data)
         } catch (error) {
             console.error('Erro ao buscar personagens:', error)

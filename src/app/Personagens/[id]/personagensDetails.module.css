@@ -22,6 +22,8 @@
     height: 60vh;
 }
 
+
+
 .title {
     font-size: 1.75rem;
     font-weight: bold;
@@ -46,3 +48,19 @@
     color: var(--mh-purple);
 }
 
+.characterImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 12px;
+    object-fit: fill;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    max-width: 50%;
+}

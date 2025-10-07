@@ -14,7 +14,7 @@ export default function FilmesDetails() {
     useEffect(() => {
         const fetchMovie = async () => {
             try {
-                const response = await axios.get(`http://localhost:4001/filmes/${id}`)
+                const response = await axios.get(`http://localhost:5000/filmes/${id}`)
                 setMovie(response.data)
             } catch (error) {
                 console.error("Erro ao buscar filme:", error)

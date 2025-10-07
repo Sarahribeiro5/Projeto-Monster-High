@@ -14,7 +14,7 @@ export default function PersonagensDetails() {
     useEffect(() => {
         const fetchCharacter = async () => {
             try {
-                const response = await axios.get(`http://localhost:4001/personagens/${id}`)
+                const response = await axios.get(`http://localhost:5000/personagens/${id}`)
                 setCharacter(response.data)
             } catch (error) {
                 console.error("Erro ao buscar personagem:", error)
@@ -46,7 +46,6 @@ export default function PersonagensDetails() {
                             <strong className={styles.strong}>Características:</strong>
                             <p className={styles.detail}>{character.características}</p>
                         </div>
-                        
                     </div>
                 </div>
             </main>

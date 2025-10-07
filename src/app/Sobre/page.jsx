@@ -36,8 +36,8 @@ export default function Sobre() {
                         </p>
                     </section>
                 </main>
-                <Footer />
             </div>
+            <Footer />
         </div>
     )
 }

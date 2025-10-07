@@ -1,72 +1,55 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'next/navigation'
 import axios from 'axios'
-import { useRouter } from 'next/navigation'
-import Header from '../../Components/Header/page'
-import Footer from '../../Components/Footer/page'
-import styles from './personagens.module.css'
+import Header from '../../../Components/Header/page'
+import Footer from '../../../Components/Footer/page'
+import styles from './personagensDetails.module.css'
 
 export default function PersonagensDetails() {
-    const [characters, setCharacters] = useState([])
-    const [loading, setLoading] = useState(false)
-    const router = useRouter()
+    const { id } = useParams()
+    const [character, setCharacter] = useState(null)
+    const [loading, setLoading] = useState(true)
 
-    const searchForCharacters = async () => {
-        setLoading(true)
-        try {
-            const response = await axios.get('http://localhost:4001/personagens')
-            setCharacters(response.data)
-        } catch (error) {
-            console.error('Erro ao buscar personagens:', error)
-        } finally {
-            setLoading(false)
+    useEffect(() => {
+        const fetchCharacter = async () => {
+            try {
+                const response = await axios.get(`http://localhost:4001/personagens/${id}`)
+                setCharacter(response.data)
+            } catch (error) {
+                console.error("Erro ao buscar personagem:", error)
+            } finally {
+                setLoading(false)
+            }
         }
-    }
+        fetchCharacter()
+    }, [id])
 
-    const handleCardClick = (id) => {
-        if (!id) return
-        router.push(`/Personagens/${encodeURIComponent(id)}`)
-    }
-
-    const handleCardKeyDown = (e, id) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault()
-            handleCardClick(id)
-        }
-    }
+    if (loading) return <p className={styles.loading}>Carregando personagem...</p>
+    if (!character) return <p className={styles.loading}>Personagem não encontrado.</p>
 
     return (
-        <div className={styles.charactersPage}>
+        <div className={styles.container}>
             <Header />
-            <div className={styles.introSection}>
-                <h1 className={styles.title}>Personagens - Monster High</h1>
-                <p className={styles.description}>Explore todos os personagens da franquia Monster High.</p>
-                <button className={styles.loadButton} onClick={searchForCharacters} disabled={loading}>
-                    {loading ? "Carregando..." : "Buscar Personagens"}
-                </button>
-            </div>
-
-            <div className={styles.charactersGrid}>
-                {characters.length > 0 ? (
-                    characters.map(character => (
-                        <div
-                            key={character.id}
-                            className={styles.characterCard}
-                            role="button"
-                            tabIndex={0}
-                            style={{ backgroundImage: `url(${character.imagem || ''})` }}
-                            onClick={() => handleCardClick(character.id)}
-                            onKeyDown={(e) => handleCardKeyDown(e, character.id)}
-                        >
-                            <div className={styles.characterName}>{character.nome}</div>
+            <main className={styles.mainSection}>
+                <h1 className={styles.title}>{character.nome}</h1>
+                <div className={styles.card}>
+                    <div className={styles.imageContainer}>
+                        <img src={character.imagem} alt={character.nome} className={styles.characterImage} />
+                    </div>
+                    <div className={styles.infoContainer}>
+                        <div className={styles.description}>
+                            <strong className={styles.strong}>Idade:</strong>
+                            <p className={styles.detail}>{character.idade}</p>
                         </div>
-                    ))
-                ) : (
-                    <p className={styles.noResults}>
-                        {loading ? "Carregando personagens..." : "Clique no botão para carregar os personagens!"}
-                    </p>
-                )}
-            </div>
+                        <div className={styles.description}>
+                            <strong className={styles.strong}>Características:</strong>
+                            <p className={styles.detail}>{character.características}</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </main>
             <Footer />
         </div>
     )

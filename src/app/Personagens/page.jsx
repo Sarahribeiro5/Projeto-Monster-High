@@ -2,8 +2,8 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import { useRouter } from 'next/navigation'
-import Header from '../../Components/Header/page'
-import Footer from '../../Components/Footer/page'
+import Header from '@/Components/Header/page.jsx'
+import Footer from '@/Components/Footer/page.jsx'
 import styles from './personagens.module.css'
 
 export default function Personagens() {

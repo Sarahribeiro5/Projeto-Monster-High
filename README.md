@@ -1,16 +1,16 @@
 # Projeto Monster High
 
-## Descrição 
+### Descrição 
 Este projeto tem o objetivo de informar aos fãs da franquia de Monster High sobre os personagens principais e seus filmes
 
-## Instalação
+### Instalação
 ```bash
 git clone https://github.com/Sarahribeiro5/Projeto-Monster-High
 cd Projeto-Monster-High
 npm i
 ```
 
-## Como rodar
+### Como rodar
 - Front-end:
 ```bash
 npm run dev
@@ -21,5 +21,5 @@ npm run dev
 npm run dev
 ```
 
-## Acessar
+### Acessar
 http://localhost:5000
